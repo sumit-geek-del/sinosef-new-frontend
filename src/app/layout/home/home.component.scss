@@ -2,18 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
 .carousel-item > img{
-    height: 91vh !important;
+    height: 100vh !important;
 }
 
 .carousel-item::before{
     content: "";
     background-size: cover;
     position: absolute;
-        top: 0px;
-        right: 0px;
-        bottom: 0px;
-        left: 0px;
-        background-color: rgba(0,0,0,0.6);
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.6);
 }
 
 .carousel-caption{
@@ -65,7 +65,6 @@
     right: 298px;
     font-size: 15px;
     text-transform: uppercase;
-    // font-family: "Roboto Slab", serif;
     font-family: 'Merriweather', serif;
     font-weight: 700;
     letter-spacing: 0.9rem;

@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 .container-fluid{
-    min-height: 30vh;
+    min-height: 20vh;
     // margin-top: 15px;
     background-color: #000;
     color: #fff;
@@ -134,4 +134,8 @@
 .rights_div {
     margin-top: 30px;
     text-align: center;
+}
+
+.company_logo > img{
+    width: 44%;
 }

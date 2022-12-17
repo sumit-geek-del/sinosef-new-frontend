@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component'
+import { AboutUsComponent } from './about-us.component';
 
 const routes: Routes = [
   {
-    path:'', component:HomeComponent
+    path:'', component:AboutUsComponent
   }
 ];
 
@@ -12,4 +12,8 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class LayoutRoutingModule { }
+export class AboutUsRoutingModule { 
+  constructor(){
+    console.log("About Us Module is loaded");
+  }
+}

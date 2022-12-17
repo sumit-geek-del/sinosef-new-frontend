@@ -3,7 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path:'', loadChildren: ()=> import('./layout/layout.module').then((m)=> {return m.LayoutModule}).catch((err)=>{throw new Error(`Error in app routing module of layout ${err}`)})
+    path:'', loadChildren: ()=> import('./layout/home/home.module').then((m)=> {return m.HomeModule}).catch((err)=>{throw new Error(`Error in app routing module of layout ${err}`)})
+  },
+  {
+    path:'about', loadChildren:()=> import('./layout/about-us/about-us.module').then((m)=> {return m.AboutUsModule}).catch((err)=>{throw new Error(`Error in App Layout module of about ${err}`)})
   }
 ];
 
