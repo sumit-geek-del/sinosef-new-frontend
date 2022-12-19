@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-
+:root{
+    --primary-color-one:#078586;
+    --heading-size-main:4rem;
+}
 *{
     margin: 0;
     padding: 0;
@@ -10,4 +13,7 @@
 
 html{
     font-size: 62.5%;
+}
+body{
+    // padding-top: 66px;
 }

@@ -7,6 +7,11 @@ const routes: Routes = [
   },
   {
     path:'about', loadChildren:()=> import('./layout/about-us/about-us.module').then((m)=> {return m.AboutUsModule}).catch((err)=>{throw new Error(`Error in App Layout module of about ${err}`)})
+  },
+  {
+    path:'contact', loadChildren:()=> import('./layout/contact/contact-us.module').then((m)=>{return m.ContactUsModule}).catch((err)=>{
+      throw new Error(`Error in App Routing Module of contact us ${err}`)
+    })
   }
 ];
 

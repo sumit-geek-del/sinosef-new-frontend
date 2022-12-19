@@ -14,10 +14,8 @@ export class HeaderNavbarComponent implements OnInit {
   }
 
   routeToComponent(path:string){
-    console.log(this._router.url);
-    console.log(path)
-    this._router.navigate(['about']);
-    console.log(this._router.url)
+
+    this._router.navigate([path]);
   }
 
 }
