@@ -12,6 +12,53 @@
     </div>
   </div>
 
-  <div class="container">
-    <h1>Contact Us</h1>
+  <div class="container main_contact_div">
+    <div class="row">
+      <div class="col-md-6 col-lg-6 col-sm-12">
+
+        <div class="row left_main_div">
+        <div class="col heading_div">
+        <h1>How Can We help ?</h1>
+        <h1>Get In touch with <br> our company</h1>
+          </div>
+          <div class="col">    
+        <p class="heading_p">Have Questions ?</p>
+        <p class="heading_p">Fill Out our Contact Form, and we'll put you in touch with the right people.</p>
+        </div>
+        <div class="col form_div">
+          <form class="example-form" [formGroup]="contactUsForm">
+            <mat-form-field  class="example-full-width" appearance="outline">
+              <mat-label>Name</mat-label>
+              <input type="text" matInput formControlName="name" 
+                     placeholder="Ex. pat@example.com" autocomplete="off">
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="outline">
+              <mat-label>Email</mat-label>
+              <input type="email" matInput formControlName="email" 
+                     placeholder="Ex. pat@example.com" autocomplete="off">
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="outline">
+              <mat-label>Phone No</mat-label>
+              <input type="email" matInput formControlName="phoneNumber" 
+                     placeholder="Ex. pat@example.com" autocomplete="off">
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="outline">
+              <mat-label>Subject</mat-label>
+              <input type="email" matInput formControlName="subject" 
+                     placeholder="Ex. pat@example.com" autocomplete="off">
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="outline">
+              <mat-label>Ouestion/Message</mat-label>
+              <textarea matInput formControlName="message" placeholder="Ex. It makes me feel..." autocomplete="off"></textarea>
+            </mat-form-field>
+          </form>
+        </div>
+    
+        </div>
+       
+      </div>
+      <div class="col-md-6 col-lg-6 col-sm-12">
+
+      </div>
+    </div>
   </div>

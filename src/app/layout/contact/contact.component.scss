@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
 .main_div > img{
     max-width: 100%;
     width: 100%;
@@ -73,4 +75,61 @@
 
 .active{
     color: #fab915;
+}
+
+
+.heading_div > h1:first-child{
+    font-size: 24px;
+    color: #444;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 900;
+    font-family: "Roboto Slab", serif;
+    margin-left: 10px;
+
+}
+
+.heading_div > h1:nth-child(2){
+
+    font-size: 50px;
+    margin-bottom: 45px;
+    color: #111;
+    font-weight: 800;
+    font-family: "Montserrat", sans-serif;
+    text-transform: capitalize;
+    margin-top: 15px;
+    text-align: left;
+
+}
+
+.heading_p{
+    font-size: 1.5rem;
+    line-height: 25px;
+    color: #444;
+    font-family: "Montserrat", sans-serif;
+    // font-weight: 400;
+    font-weight: 500;
+}
+
+.main_contact_div{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.left_main_div{
+    flex-direction: column;
+}
+
+.example-full-width{
+    width: 100%;
+    font-size: 14px !important;
+}
+
+.form_div{
+    margin-top: 40px;
+}
+
+
+::placeholder{
+    color: #111;
 }

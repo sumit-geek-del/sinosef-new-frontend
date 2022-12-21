@@ -15,5 +15,7 @@ html{
     font-size: 62.5%;
 }
 body{
-    // padding-top: 66px;
+    padding-top: 66px;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
