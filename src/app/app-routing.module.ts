@@ -12,6 +12,16 @@ const routes: Routes = [
     path:'contact', loadChildren:()=> import('./layout/contact/contact-us.module').then((m)=>{return m.ContactUsModule}).catch((err)=>{
       throw new Error(`Error in App Routing Module of contact us ${err}`)
     })
+  },
+  {
+    path:'career', loadChildren:()=> import('./layout/career/career.module').then((m)=>{return m.CareerModule}).catch((err)=>{
+      throw new Error(`Error in App Routing Module of career ${err}`)
+    })
+  },
+  {
+    path:'images', loadChildren:()=> import('./layout/gallery/images/images.module').then((m)=> {return m.ImagesModule}).catch((err)=>{
+      throw new Error(`Error in the App Routing Module of images ${err}`)
+    })
   }
 ];
 
