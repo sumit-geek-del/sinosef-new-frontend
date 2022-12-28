@@ -92,3 +92,10 @@
     color: #ff4757;
     border: none;
 }
+
+@media (max-width:768px){
+    .navbar-brand{
+        margin-left: 0;
+
+    }
+}
