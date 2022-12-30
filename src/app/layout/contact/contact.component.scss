@@ -253,3 +253,45 @@ font-family: "Montserrat", sans-serif;
     color: #4b6584!important;
 }
 
+
+
+@media screen and (max-width:768px) {
+    .breadcrumb_div{
+        left: 27%;
+    }
+
+    .breadcrumb-item{
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+
+    .heading_div > h1:nth-child(2){
+        margin-bottom: 10px;
+        font-size: 30px;
+        margin-left: 8px;
+    }
+
+    .heading_p{
+        margin-left: 12px;
+    }
+
+    .form_div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+
+    .right_div{
+        margin-left: 0px;
+        width: 100vw;
+    }
+
+    .fa_icon{
+        justify-content: flex-start;
+    }
+    .main_contact_div{
+        margin-bottom: 17px;
+    }
+}

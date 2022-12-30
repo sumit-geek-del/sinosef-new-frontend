@@ -98,4 +98,7 @@
         margin-left: 0;
 
     }
+    .nav-item > a:hover::after {
+        width: 0%;
+    }
 }

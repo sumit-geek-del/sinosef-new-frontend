@@ -247,3 +247,47 @@ font-size: 1.6rem;
     position: relative;
     right: -12px;
 }
+
+
+@media screen and (max-width:768px) {
+    .breadcrumb_div{
+        left: 26%;
+    }
+
+    .main_div_heading > h1{
+        font-size: 3.2rem;
+        margin-top: 41px;
+        margin-bottom: 2rem;
+    }
+
+    .main_div_heading{
+        clip-path: ellipse(105% 100% at center top);
+        padding-bottom: 6rem!important;
+    }
+
+    .about_us{
+        margin: 0 20px;
+    }
+
+    .about_us_v{
+        margin: 0 20px;
+    }
+    .responsive{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+
+    .mat-form-field{
+        width: 100%;
+    }
+
+    .sub_btn{
+        margin-left: 0;
+    }
+
+    .input{
+        width: 100%;
+    }
+}

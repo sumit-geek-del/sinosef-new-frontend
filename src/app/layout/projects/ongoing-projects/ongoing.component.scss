@@ -357,3 +357,74 @@ margin-left: 59px;
     cursor: pointer;
     color: #E14D2A;
 }
+
+
+@media (max-width:768px){
+    .main_div > h1{
+        top: 13%;
+    }
+    .breadcrumb_div{
+        top: 44%;
+        left: 11%;
+    }
+    .breadcrumb-item{
+        font-size: 15px;
+    }
+    .number_div{
+        padding: 27px;
+    }
+    .heading{
+        top: -6px;
+        left: 5px;
+        font-size: 27px;
+    }
+
+    .heading_container{
+        display: none;
+    }
+    .our_mission_right_img_div{
+        width: 100vw;
+        height: 180px;
+    }
+
+    .our_mission_img_left{
+        border-radius: 10px 10px 130px 10px;
+    }
+
+    .our_vision_img_right{
+        border-radius: 10px 10px 10px 130px;
+    }
+
+    .our_mission_right_cont_div{
+        margin-left: 0;
+    }
+
+    .about_company_heading::before{
+        width: 10%;
+        height: 3px;
+        left: -24px;
+        top: 14px;
+    }
+
+    .about_project > span:last-child::before{
+        margin-right: 5px;
+    }
+
+    .about_project > span:first-child::before{
+        margin-right: 6px;
+    }
+
+    .about_project > span:nth-child(2)::before{
+        margin-right: 6px;
+    }
+
+    .our_vision_right_img_div{
+        width: 100vw;
+        height: 180px;
+        margin-right: 0px;
+    }
+
+    .need_info > span{
+        font-size: 14px;
+    }
+}

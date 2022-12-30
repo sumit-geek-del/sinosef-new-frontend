@@ -546,3 +546,123 @@ margin-left: 59px;
 
   position: relative;
 }
+
+@media screen and (max-width:768px) {
+    .breadcrumb_div{
+        top: 43%;
+        left: 28%;
+    }
+
+    .breadcrumb-item{
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+
+    .content_div{
+        margin-top: 24px;
+    }
+
+    .about_us_head{
+        letter-spacing: 0.1px;
+        font-size: 2rem;
+    }
+
+    .about_us_head::before{
+        font-size: 1.5rem;
+        margin-right: 1rem;
+    }
+
+    .image_div > img{
+        width: 40%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .about_company_div{
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .col-md-auto > h2{
+        margin-left: 10px;
+    }
+
+    .our_services{
+        margin-left: 10px;
+    }
+    .responsive{
+        margin-bottom: 30px;
+    }
+
+    .image_box{
+        left: 0;
+    }
+
+    .image_box > img{
+        left: -10px;
+        top: -12px;
+    }
+
+    .image_one{
+        width: 50%;
+    }
+    .image_two{
+        margin-top: 185px;
+    }
+
+    .image_three{
+        top: 300px;
+        width: 300px;
+    }
+
+    .director_div_main{
+        margin-top: -71px;
+    }
+
+    .director_heading{
+        font-size: 34px;
+    }
+
+    .image_div_two{
+        width: 100%;
+    }
+
+    .about_director_div{
+        margin-top:20px;
+    }
+
+    .director_links > i{
+        font-size: 3rem;
+        margin-right: 15px;
+    }
+
+    .mission_heading > h1{
+        font-size: 3rem;
+    }
+    .our_mission_right_img_div{
+        width: 100vw;
+        height: 180px;
+    }
+
+    .our_mission_img_left{
+        border-radius: 10px 10px 130px 10px;
+    }
+
+    .our_vision_img_right{
+        border-radius: 10px 10px 10px 130px;
+    }
+
+    .our_mission_right_cont_div{
+        margin-left: 0;
+    }
+
+    .our_vision_right_img_div{
+        width: 100vw;
+        height: 180px;
+        margin-right: 0;
+    }
+
+    .our_vision_right_cont_div{
+        margin-right: 0;
+    }
+}

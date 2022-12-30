@@ -165,3 +165,18 @@ h3{
     margin-top: 30px;
     margin-bottom: 30px;
 }
+
+@media (max-width:768px){
+    .breadcrumb_div{
+        left: 20%;
+    }
+
+    .breadcrumb-item{
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+
+    .heading_container > h1{
+        font-size: 36px;
+    }
+}
