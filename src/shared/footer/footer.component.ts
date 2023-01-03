@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import * as Aos from 'aos';
 
 @Component({
@@ -8,10 +9,15 @@ import * as Aos from 'aos';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _router:Router) { }
 
   ngOnInit(): void {
     Aos.init();
   }
+  routeToComponent(path:string){
+
+    this._router.navigate([path], {skipLocationChange:true});
+  }
+
 
 }

@@ -37,6 +37,9 @@ const routes: Routes = [
     path:"video", loadChildren:()=>import('./layout/gallery/videos/video-gallery.module').then((m)=>{return m.VideoGalleryModule}).catch((err)=>{
       throw new Error(`Error in app routing module of video gallery ${err}`)
     })
+  },
+  {
+    path:'ourClients', loadChildren:()=> import('./layout/our-clients/our-clients.module').then((m)=>{return m.OurClientsModule}).catch((err)=>{throw new Error(`Error in App routing module of our clients ${err}`)})
   }
 ];
 

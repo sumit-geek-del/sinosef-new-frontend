@@ -18,11 +18,11 @@
             </div>
 
             <div class="nav-links">
-               <p>Home</p>
-               <p>About Us</p>
-               <p>Projects</p>
-               <p>Contact</p>
-               <p class="career">Career</p>
+               <p (click)="routeToComponent('')">Home</p>
+               <p (click)="routeToComponent('about')">About Us</p>
+               <p (click)="routeToComponent('ongoing')">Projects</p>
+               <p (click)="routeToComponent('contact')">Contact</p>
+               <p (click)="routeToComponent('career')" class="career">Career</p>
             </div>
             <div class="footer_right_icons">
             <i class="fa fa-facebook-square" aria-hidden="true"></i>
