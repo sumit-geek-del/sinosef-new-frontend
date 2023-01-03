@@ -305,3 +305,10 @@ font-family: "Montserrat", sans-serif;
         left: 41%;
     }
 }
+
+@media screen and (max-width:1400px) and (min-width:1025px) {
+    .right_div{
+        width: 40%;
+        margin-left: 85px;
+    }
+}
