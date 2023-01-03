@@ -295,3 +295,13 @@ font-family: "Montserrat", sans-serif;
         margin-bottom: 17px;
     }
 }
+
+@media  screen and (max-width:1024px) and (min-width:768px) {
+    .right_div{
+        margin-left: 67px;
+    }
+
+    .breadcrumb_div{
+        left: 41%;
+    }
+}

@@ -92,3 +92,10 @@
         height: 60vh !important;
     }
 }
+
+@media screen and (max-width:1024px) and (min-width:768px) {
+    .carousel-caption{
+        right: 180px;
+        top: 278px;
+    }
+}

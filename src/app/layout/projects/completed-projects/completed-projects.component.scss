@@ -400,3 +400,26 @@ margin-left: 59px;
         margin-right: 0px;
     }
 }
+
+@media screen and (max-width:1024px) and (min-width:768px) {
+    .breadcrumb_div{
+        left: 36%;
+    }
+
+    .heading_container > h1{
+        font-size: 39px;
+        margin-top: 13px;
+    }
+
+    .our_mission_right_img_div{
+        height: 300px;
+    }
+
+    .our_vision_right_img_div{
+        height: 300px;
+    }
+
+    .heading{
+        font-size: 27px;
+    }
+}

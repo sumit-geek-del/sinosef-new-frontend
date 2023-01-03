@@ -291,3 +291,21 @@ font-size: 1.6rem;
         width: 100%;
     }
 }
+
+@media screen and (max-width:1024px) and (min-width:768px) {
+    .breadcrumb_div{
+        top: 43%;
+        left: 42%;
+    }
+
+    .mat-form-field{
+        width: 100%;
+    }
+    .input{
+        width: 100%;
+    }
+
+    .sub_btn{
+        margin-left: 0;
+    }
+}

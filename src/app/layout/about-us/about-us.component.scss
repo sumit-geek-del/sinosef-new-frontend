@@ -666,3 +666,45 @@ margin-left: 59px;
         margin-right: 0;
     }
 }
+
+
+@media screen and (max-width:1024px) and (min-width:768px) {
+    .breadcrumb_div{
+        left: 41%;
+        top: 43%;
+    }
+
+    .leaders_head{
+        font-size: 1.7rem;
+    }
+
+    .col-md-auto > h2{
+        padding-top: 3px;
+    }
+
+    .image_box{
+        left: 14px;
+    }
+
+    .image_three{
+        width: 424px;
+    }
+    .right_strips{
+        right: 274px;
+    }
+
+    .left_circle{
+        left: 232px;
+    }
+
+    .image_div_two{
+        width: 60%;
+    }
+
+    .our_mission_right_img_div{
+        height: 300px;
+    }
+    .our_vision_right_img_div{
+        height: 300px;
+    }
+}

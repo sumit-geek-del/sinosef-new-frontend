@@ -178,3 +178,21 @@
     
 
 }
+
+@media screen and (max-width:1024px) and (min-width:768px) {
+    .nav-links > p{
+
+        margin-right: 7px;
+        font-size: 16px;
+    }
+    .right_div{
+        margin: 10px 0;
+    }
+
+    .left_div{
+        margin-left: 100px
+    }
+    .company_details{
+        width: 100%;
+    }
+}
