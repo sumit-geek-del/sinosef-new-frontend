@@ -40,6 +40,11 @@ const routes: Routes = [
   },
   {
     path:'ourClients', loadChildren:()=> import('./layout/our-clients/our-clients.module').then((m)=>{return m.OurClientsModule}).catch((err)=>{throw new Error(`Error in App routing module of our clients ${err}`)})
+  },
+  {
+    path:'whyChooseUs', loadChildren:()=> import('./layout/choose-us/choose-us.module').then((m)=>{return m.ChooseUsModule}).catch((err)=>{
+      throw new Error(`Error in app routing module of why choose us ${err}`)
+    })
   }
 ];
 
