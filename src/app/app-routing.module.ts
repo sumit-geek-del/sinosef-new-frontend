@@ -21,6 +21,21 @@ const routes: Routes = [
     path:'career', loadChildren:()=> import('src/app/layout/career/career.module').then((m)=>{return m.CareerModule}).catch((err)=>{
       throw new Error(`Error in App Routing module of career module`);
     })
+  },
+  {
+    path:'images', loadChildren:() => import('src/app/layout/gallery/gallery.module').then((m)=>{return m.GalleryModule}).catch((err)=>{
+      throw new Error(`Error in App routing module of images module`);
+    })
+  },
+  {
+    path:'video', loadChildren:()=> import('src/app/layout/gallery/gallery.module').then((m)=>{return m.GalleryModule}).catch((err)=>{
+      throw new Error(`Error in App routing module of videos gallery`);
+    })
+  },
+  {
+    path:'ongoing', loadChildren:()=> import('src/app/layout/projects/projects.module').then((m)=>{return m.ProjectsModule}).catch((err)=>{
+      throw new Error(`Error in App Routing module of ongoing projects`);
+    })
   }
 ];
 

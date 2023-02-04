@@ -13,64 +13,47 @@
     right: 0px;
     bottom: 0px;
     left: 0px;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0,0,0,0.4);
 }
 
 .carousel-caption{
-    right: 554px;
     position: absolute;
-    top: 292px;
+    top: 276px;
+    right: 29%;
 }
 .carousel-caption > h5{
     // position: relative;
     bottom: 237px;
     right: 273px;
-    font-size: 61px;
+    font-size: 51px;
     text-transform: uppercase;
     font-family: "Roboto Slab", serif;
-    font-weight: 700;
-    letter-spacing: 0.9rem;
+    font-weight: 900;
     word-spacing: 3px;
     color: #fff;
-
     overflow: hidden;
-    border-right: 5px solid #ee5253;
     white-space: nowrap; 
     margin: 0 auto;
-    // letter-spacing: .15em; 
-    animation: 
-      typing 3.5s steps(40, end),
-      blink-caret .75s step-end infinite;
-}
+    text-align: right;
 
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-  
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #ee5253; }
-  }
+}
 
 
 .carousel-caption > h5 > span{
-    color: #2eca6a;
+    color: #fff;
 }
 
 .carousel-caption > p{
-    // position: relative;
     bottom: 233px;
     right: 298px;
     font-size: 15px;
     text-transform: uppercase;
     font-family: 'Merriweather', serif;
     font-weight: 700;
-    letter-spacing: 0.9rem;
     word-spacing: 3px;
     line-height: 30px;
     color: #fff;
+    text-align: right;
 }
 
 @media (max-width:768px){

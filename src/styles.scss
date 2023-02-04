@@ -6,18 +6,18 @@
     --primary-color-one:#078586;
     --heading-size-main:4rem;
 }
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
 body{
     padding-top: 66px;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body { height: 100%; overflow-x: hidden; }
+body { margin: 0; font-family: 'FuturaPT-Book'; }
 
 .submit_btn{
     padding: 18px 84px 18px 50px;
@@ -88,4 +88,30 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
         border-left: 0 solid transparent;
         border-right: 30px solid transparent;
         border-top: 65px solid #ffee02;
+    }
+
+
+    .h1_main_heading{
+    text-transform: uppercase;
+    font-family: 'Roboto Slab', serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: #222f3e;
+    letter-spacing: 1.5px;
+    margin: 20px 0;
+    position: relative;
+    display: inline-block;
+    }
+
+    .p_main_paragraph{
+    margin-top: 30px;
+    color: #444;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+    }
+
+    .img_max{
+        max-width: 100%;
+        max-height: 100%;
     }

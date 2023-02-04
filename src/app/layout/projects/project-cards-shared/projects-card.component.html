@@ -1,0 +1,16 @@
+<div class="row">
+
+    <ng-container *ngFor="let projects of projectDetails">
+        <div class="col-md-6 col-lg-6 sol-sm-12 image_div">
+            <img class="img_max" [src]="projects.src" alt="" appImgTransform>
+    
+            <div class="col-md-3 content_div">
+                <h6>{{projects.name}}</h6>
+                <span>{{projects.client}}</span>
+                <span>{{projects.address}}</span>
+                <span>{{projects.scope}}</span>
+            </div>
+        </div>
+    </ng-container>
+
+</div>
