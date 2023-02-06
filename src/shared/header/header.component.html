@@ -17,8 +17,9 @@
               Company
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Why Choose Us</a></li>
-              <li><a class="dropdown-item" href="#">Our Clients</a></li>
+              <li><a class="dropdown-item" (click)="routeToComponent('about')">About Us</a></li>
+              <li><a class="dropdown-item" (click)="routeToComponent('whyUs')">Why Choose Us</a></li>
+              <li><a class="dropdown-item" (click)="routeToComponent('ourClients')">Our Clients</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -26,9 +27,9 @@
               Services
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">External Development</a></li>
-              <li><a class="dropdown-item" href="#">Civil Structure</a></li>
-              <li><a class="dropdown-item" href="#">Civil Finishing</a></li>
+              <li><a class="dropdown-item" (click)="routeToComponent('extDev')">External Development</a></li>
+              <li><a class="dropdown-item" (click)="routeToComponent('civilSt')">Civil Structure</a></li>
+              <li><a class="dropdown-item" (click)="routeToComponent('civilFin')">Civil Finishing</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -57,13 +58,8 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" (click)="routeToComponent('contact')">Contact Us</a>
           </li>
-
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" (click)="routeToComponent('about')">About Us</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" (click)="routeToComponent('about')">Certificate</a>
+            <a class="nav-link active" aria-current="page" (click)="routeToComponent('certificates')">Certificate</a>
           </li>
         </ul>
       </div>
