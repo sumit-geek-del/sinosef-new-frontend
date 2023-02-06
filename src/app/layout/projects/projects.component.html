@@ -2,15 +2,21 @@
     <div class="row">
         <div class="col-md-9 col-lg-9 col-sm-12" [appMainDiv]="'left'">
             <h1 *ngIf="isOnGoing" class="h1_main_heading">{{onGoingProjectsHeading}}</h1>
-            <h1 *ngIf="isCompleted">{{completedProjectsHeading}}</h1>
+            <h1 *ngIf="isCompleted" class="h1_main_heading">{{completedProjectsHeading}}</h1>
             <div class="row">
-              
+                
+                <ng-container *ngIf="isOnGoing">
                     <app-projects-card [projectDetails]="onGoingProjectsList"></app-projects-card>
+                </ng-container>
+
+                <ng-container *ngIf="isCompleted">
+                    <app-projects-card [projectDetails]="completedProjectsList"></app-projects-card>
+                </ng-container>
             
             </div>
         </div>
         <div class="col-md-3 col-lg-3 col-sm-12">
-            <img class="img_max" src="assets/images/katthy-k-mal-FBX_qonbn5M-unsplash.jpg" alt="">
+            <img class="img" src="assets/images/katthy-k-mal-FBX_qonbn5M-unsplash.jpg" alt="">
         </div>
     </div>
 </div>

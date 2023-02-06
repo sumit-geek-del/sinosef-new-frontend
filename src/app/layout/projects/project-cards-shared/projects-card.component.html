@@ -2,15 +2,20 @@
 
     <ng-container *ngFor="let projects of projectDetails">
         <div class="col-md-6 col-lg-6 sol-sm-12 image_div">
-            <img class="img_max" [src]="projects.src" alt="" appImgTransform>
-    
-            <div class="col-md-3 content_div">
-                <h6>{{projects.name}}</h6>
-                <span>{{projects.client}}</span>
-                <span>{{projects.address}}</span>
-                <span>{{projects.scope}}</span>
-            </div>
+            <div class="card">
+                <div class="image">
+                  <img [src]="projects.src" alt="Card Image">
+                </div>
+                <div class="content">
+                  <h3 class="title">{{projects.name}}</h3>
+                  <p class="description">{{projects.client}}</p>
+                  <p class="description">{{projects.scope}}</p>
+                  <p class="description">{{projects.address}}</p>
+                </div>
+              </div>
         </div>
     </ng-container>
 
 </div>
+
+

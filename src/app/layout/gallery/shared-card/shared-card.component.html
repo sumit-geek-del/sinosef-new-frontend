@@ -3,8 +3,8 @@
         <ng-container>
             <div class="col-md-4 col-sm-6 images_div" *ngFor="let galleryImage of imagesArray">
                 <img [src]='galleryImage.src' alt="">
-                <h6>{{galleryImage.name}}</h6>
-                <p>{{galleryImage.type}}</p>
+                <h6 *ngIf="from=='certificate' || 'ourClients'">{{galleryImage.name}}</h6>
+                <p *ngIf="from=='certificate'">{{galleryImage.type}}</p>
             </div>
         </ng-container>
   

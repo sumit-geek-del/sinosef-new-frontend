@@ -40,6 +40,21 @@ export class ImageGalleryComponent implements OnInit {
   currentURL:string = '';
   showImage:boolean = false;
   showVideo:boolean=false;
+  showCertificates:boolean = false;
+  certificatesArray:Array<any> = [
+    {
+      src:'assets/certificates/1.jpg'
+    },
+    {
+      src:'assets/certificates/2.jpg'
+    },
+    {
+      src:'assets/certificates/3.jpg'
+    },
+    {
+      src:'assets/certificates/6.jpg'
+    }
+  ]
   constructor(private _route:Router) { 
   
   }
@@ -48,6 +63,7 @@ export class ImageGalleryComponent implements OnInit {
     this.currentURL = this._route.url.split('/')[1];
     if(this.currentURL==='images') this.showImage = true;
     if(this.currentURL === 'video') this.showVideo = true;
+    if(this.currentURL === 'certificates') this.showCertificates = true;
   }
 
 }

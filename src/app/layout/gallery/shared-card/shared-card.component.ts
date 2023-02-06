@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SharedCardComponent implements OnInit {
   @Input() imagesArray!:Array<any>
+  @Input() from!:string;
   constructor() { }
 
   ngOnInit(): void {

@@ -12,8 +12,7 @@ export class ProjectsComponent implements OnInit {
   completedProjectsHeading:string="Completed Projects";
   isCompleted:boolean = false;
   isOnGoing:boolean = false;
-  onGoingProjectsList:Array<any> = [
-    {
+  onGoingProjectsList:Array<any> = [{
       src:'assets/Gallery/gallery3.jpg',
       name:"Godrej Nature Plus- Package-1 & 2",
       client:'Godrej HighView LLP',
@@ -52,10 +51,49 @@ export class ProjectsComponent implements OnInit {
     {
       src:'assets/Gallery/gallery6.jpg',
       name:'Wave City-Veridia',
-      client:'UppalChadhahi-tech Developers Pvt Ltd',
+      client:'UppalChadhahi-tech Developers',
       scope:'HardScape Work',
       address:'Faridabad'
     }
+  ];
+
+  completedProjectsList:Array<any> = [
+    {
+      src:'assets/Gallery/gallery3.jpg',
+      name:"Brookfield-Candor techspace N-1",
+      client:'ShantiniketanProperties Pvt Ltd',
+      scope:'External Development Work',
+      address:'Sector 72 Gurgaon'
+
+    },
+    {
+      src:'assets/Gallery/gallery1.jpg',
+      name:"WondercityBuild Pvt Ltd",
+      client:'Godrej Properties',
+      scope:'Hardscape Work',
+      address:'Sector 32 Gurgaon'
+    },
+    {
+      src:'assets/Gallery/11.jpg',
+      name:"EMAAR- PALM TERRACE SELECTS",
+      client:'EMAAR MGF LAND LIMITED',
+      scope:'External Development Work',
+      address:'Sector 64 Gurgaon'
+    },
+    {
+      src:'assets/Gallery/gallery4.jpg',
+      name:"TATA-PRIMANTI",
+      client:'Tata',
+      scope:'External Development Work',
+      address:'Sector 32 Gurgaon'
+    },
+    {
+      src:'assets/Gallery/gallery5.jpg',
+      name:'Ireo Victor Velly',
+      client:'IREO',
+      scope:'External Develpment Work',
+      address:'Sector 12 Gurgaon'
+    },
   ]
   constructor(private _router:Router) { }
 

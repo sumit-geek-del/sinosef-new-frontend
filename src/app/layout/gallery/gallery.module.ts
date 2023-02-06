@@ -17,6 +17,9 @@ import { SharedCardComponent } from './shared-card/shared-card.component';
     CommonModule,
     GalleryRoutingModule,
     SharedModule
+  ],
+  exports:[
+    SharedCardComponent
   ]
 })
 export class GalleryModule { }

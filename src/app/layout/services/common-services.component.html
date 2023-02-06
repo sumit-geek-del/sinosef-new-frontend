@@ -2,18 +2,9 @@
 <div class="container-fluid main_div">
     <div class="row">
         <div class="col-md-8 col-lg-8 col-sm-12 content_div">
-            <h1 *ngIf="isAboutUs">About Us</h1>
-            <h1 *ngIf="isWhyChooseUs">Why Choose Us</h1>
-            <ng-container *ngIf="isAboutUs">
+            <h1>Services</h1>
+            <ng-container>
                 <div class="row r_p_ab" *ngFor="let item of aboutUsDataArray">
-                    <h3>{{item.subheading}}</h3>
-                    <p>{{item.content}}</p>
-                    <hr>
-                </div>
-            </ng-container>
-
-            <ng-container *ngIf="isWhyChooseUs">
-                <div class="row r_p_ab" *ngFor="let item of whyChooseUsDataArray">
                     <h3>{{item.subheading}}</h3>
                     <p>{{item.content}}</p>
                     <hr>
