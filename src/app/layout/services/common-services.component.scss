@@ -50,3 +50,16 @@
     max-height: 100%;
     margin-top: 24px;
 }
+
+@media (max-width:768px){
+    .content_div{
+        padding: 0;
+    }
+    .i_di{
+        display: none;
+    }
+    .content_div > h1{
+        margin-bottom: 20px !important;
+        margin-left: 15px;
+    }
+}

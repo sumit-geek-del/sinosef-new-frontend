@@ -64,15 +64,19 @@
     .carousel-caption > h5{
         letter-spacing: 3px;
         word-spacing: 0;
-        font-size: 20px;
+        font-size: 18px;
         margin-bottom: 20px;
+        text-align: center;
     }
     .carousel-caption > p{
-        letter-spacing: 2px;
+        letter-spacing: 1px;
+        text-align: center;
+        word-spacing: 1px;
 
     }
+
     .carousel-item > img{
-        height: 60vh !important;
+        height: 100vh !important;
     }
 }
 

@@ -2,3 +2,16 @@
     max-height: 100vh;
     object-fit: cover;
 }
+
+
+@media (max-width:768px) {
+    .main_div{
+        padding: 0 !important;
+    }
+    .m_main_heading{
+        margin: 40px 0px 20px 20px!important;
+    }
+    .img_div{
+        display: none;
+    }
+}

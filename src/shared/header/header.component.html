@@ -10,16 +10,16 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item no-dropDown">
-            <a class="nav-link active" aria-current="page" (click)="routeToComponent('/')">Home</a>
+            <a class="nav-link active" aria-current="page" (click)="routeToComponent('/')" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">Home</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Company
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" (click)="routeToComponent('about')">About Us</a></li>
-              <li><a class="dropdown-item" (click)="routeToComponent('whyUs')">Why Choose Us</a></li>
-              <li><a class="dropdown-item" (click)="routeToComponent('ourClients')">Our Clients</a></li>
+              <li><a class="dropdown-item" (click)="routeToComponent('about')" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">About Us</a></li>
+              <li><a class="dropdown-item" (click)="routeToComponent('whyUs')" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">Why Choose Us</a></li>
+              <li><a class="dropdown-item" (click)="routeToComponent('ourClients')" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">Our Clients</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -27,9 +27,9 @@
               Services
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" (click)="routeToComponent('extDev')">External Development</a></li>
-              <li><a class="dropdown-item" (click)="routeToComponent('civilSt')">Civil Structure</a></li>
-              <li><a class="dropdown-item" (click)="routeToComponent('civilFin')">Civil Finishing</a></li>
+              <li><a class="dropdown-item" (click)="routeToComponent('extDev')" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">External Development</a></li>
+              <li><a class="dropdown-item" (click)="routeToComponent('civilSt')" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">Civil Structure</a></li>
+              <li><a class="dropdown-item" (click)="routeToComponent('civilFin')" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">Civil Finishing</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -37,8 +37,8 @@
               Projects
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" (click)="routeToComponent('ongoing')">OnGoing</a></li>
-              <li><a class="dropdown-item" (click)="routeToComponent('completed')">Completed</a></li>
+              <li><a class="dropdown-item" (click)="routeToComponent('ongoing')" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">OnGoing</a></li>
+              <li><a class="dropdown-item" (click)="routeToComponent('completed')" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">Completed</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -46,20 +46,20 @@
              Gallery 
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" (click)="routeToComponent('images')">Images</a></li>
-              <li><a class="dropdown-item" (click)="routeToComponent('video')">Videos</a></li>
+              <li><a class="dropdown-item" (click)="routeToComponent('images')" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">Images</a></li>
+              <li><a class="dropdown-item" (click)="routeToComponent('video')" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">Videos</a></li>
             </ul>
           </li>
   
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" (click)="routeToComponent('career')">Career</a>
+            <a class="nav-link active" aria-current="page" (click)="routeToComponent('career')" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">Career</a>
           </li>
   
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" (click)="routeToComponent('contact')">Contact Us</a>
+            <a class="nav-link active" aria-current="page" (click)="routeToComponent('contact')" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">Contact Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" (click)="routeToComponent('certificates')">Certificate</a>
+            <a class="nav-link active" aria-current="page" (click)="routeToComponent('certificates')" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">Certificate</a>
           </li>
         </ul>
       </div>

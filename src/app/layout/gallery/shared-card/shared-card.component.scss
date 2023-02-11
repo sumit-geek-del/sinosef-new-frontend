@@ -37,3 +37,15 @@
     font-weight: 500;
 }
 
+@media (max-width:768px){
+    .row{
+        padding: 0;
+    }
+    .images_div{
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+    }
+}

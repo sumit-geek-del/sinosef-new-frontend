@@ -2,3 +2,19 @@
     max-height: 100vh;
     object-fit: cover;
 }
+
+@media (max-width:768px){
+    .main{
+        padding: 0 !important;
+    }
+    .main_head{
+        margin-left: 15px !important;
+        margin-top: 30px !important;
+        letter-spacing: 0;
+        word-spacing: 0;
+        line-height: 35px;
+    }
+    .img{
+        display: none;
+    }
+}

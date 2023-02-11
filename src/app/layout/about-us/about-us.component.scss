@@ -50,3 +50,22 @@
     max-height: 100%;
     margin-top: 24px;
 }
+
+@media (max-width:768px){
+    .content_div {
+        padding: 0;
+    }
+    .i_di {
+        display: none;
+    }
+    .content_div > h1{
+        margin-left: 18px;
+        margin-bottom: 20px !important;
+    }
+    .r_p_ab > p{
+        margin: 25px 0;
+    }
+    .why_choose_heading{
+        font-size: 30px !important;
+    }
+}

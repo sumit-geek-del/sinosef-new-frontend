@@ -136,3 +136,23 @@
     justify-content: center;
     align-items: center;
   }
+
+  @media (max-width:768px){
+    .he_di{
+        padding: 0;
+    }
+    .im_di{
+        display: none;
+    }
+    .he_di > p{
+        margin-top: 20px;
+        text-align: left;
+        padding: 0 10px;
+    }
+    .he_di > h1{
+        margin-left: 15px;
+    }
+    .button-9{
+        width: 35%;
+    }
+  }
