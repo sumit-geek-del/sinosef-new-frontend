@@ -8,22 +8,31 @@
         Fill Out our Contact Form, and we'll put you in touch with the right
         people.
       </span>
-      <form>
+      <form [formGroup]="contactUsForm">
         <div class="row f_d">
           <div class="col-md-6 col-lg-6 col-sm-12 pc_f_d">
             <mat-form-field class="example-full-width" appearance="outline">
               <mat-label>Name</mat-label>
-              <input matInput placeholder="Name" autocomplete="off" />
+              <input matInput placeholder="Name" autocomplete="off" formControlName="name"/>
+              <mat-error *ngIf="contactUsForm.get('name')?.touched && contactUsForm.get('name')?.errors?.['required']">
+                Please Enter Your Name *
+              </mat-error>
             </mat-form-field>
             <mat-form-field class="example-full-width" appearance="outline">
               <mat-label>Email</mat-label>
-              <input matInput placeholder="Email" autocomplete="off" />
+              <input matInput placeholder="Email" autocomplete="off" formControlName="email"/>
+              <mat-error *ngIf="contactUsForm.get('email')?.touched && contactUsForm.get('email')?.errors?.['required']">
+                Please Enter Your Email *
+              </mat-error>
             </mat-form-field>
           </div>
           <div class="col-md-6 col-lg-6 col-sm-12 pc_f_r_d">
             <mat-form-field class="example-full-width" appearance="outline">
               <mat-label>Phone No</mat-label>
-              <input matInput placeholder="Phone Number" autocomplete="off" />
+              <input matInput placeholder="Phone Number" autocomplete="off" formControlName="phoneNo"/>
+              <mat-error *ngIf="contactUsForm.get('phoneNo')?.touched && contactUsForm.get('phoneNo')?.errors?.['required']">
+                Please Enter Your Phone Number *
+              </mat-error>
             </mat-form-field>
             <mat-form-field class="example-full-width" appearance="outline">
               <mat-label>Question/Message</mat-label>
@@ -31,11 +40,15 @@
                 matInput
                 placeholder="Question/Message"
                 autocomplete="off"
+                formControlName="message"
               />
+              <mat-error *ngIf="contactUsForm.get('message')?.touched && contactUsForm.get('message')?.errors?.['required']">
+                Please Enter Your Query/message *
+              </mat-error>
             </mat-form-field>
           </div>
           <div class="row b_d">
-            <button class="button-9">Submit</button>
+            <button class="button-9" (click)="submitContactUs()">Submit</button>
           </div>
         </div>
       </form>

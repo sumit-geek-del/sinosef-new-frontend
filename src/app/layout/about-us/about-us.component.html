@@ -6,16 +6,16 @@
             <h1 *ngIf="isWhyChooseUs" [ngClass]="{'why_choose_heading':isWhyChooseUs}">Why Choose Us</h1>
             <ng-container *ngIf="isAboutUs">
                 <div class="row r_p_ab" *ngFor="let item of aboutUsDataArray">
-                    <h3>{{item.subheading}}</h3>
-                    <p>{{item.content}}</p>
+                    <h3>{{item.heading}}</h3>
+                    <p>{{item.subHeading}}</p>
                     <hr>
                 </div>
             </ng-container>
 
             <ng-container *ngIf="isWhyChooseUs">
                 <div class="row r_p_ab" *ngFor="let item of whyChooseUsDataArray">
-                    <h3>{{item.subheading}}</h3>
-                    <p>{{item.content}}</p>
+                    <h3>{{item.heading}}</h3>
+                    <p>{{item.subHeading}}</p>
                     <hr>
                 </div>
             </ng-container>

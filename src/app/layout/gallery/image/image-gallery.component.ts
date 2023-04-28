@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-
+import { Router } from '@angular/router';
+import { ViewService } from 'src/Services/view-services/view.service';
+enum ScreenName  {
+  galleryImages ='Gallery Images',
+  galleryVideos = 'Gallery Videos'
+}
 @Component({
   selector: 'app-image-gallery',
   templateUrl: './image-gallery.component.html',
@@ -55,15 +59,53 @@ export class ImageGalleryComponent implements OnInit {
       src:'assets/certificates/6.jpg'
     }
   ]
-  constructor(private _route:Router) { 
+
+  certificatesList:Array<any> = [];
+  galleryImagesList:Array<any> = [];
+  galleryVideosList:Array<any> = []
+  constructor(private _route:Router, private _viewService:ViewService) { 
   
   }
 
   ngOnInit(): void {
     this.currentURL = this._route.url.split('/')[1];
-    if(this.currentURL==='images') this.showImage = true;
-    if(this.currentURL === 'video') this.showVideo = true;
-    if(this.currentURL === 'certificates') this.showCertificates = true;
+    if(this.currentURL==='images'){
+      this.showImage = true;
+      this._viewService.viewClientsData(ScreenName.galleryImages).subscribe({
+        next:(res)=>{
+            if(res.code === 'SUC-200'){
+              this.galleryImagesList = res.data;
+            }
+        }, error:(err)=>{
+          this.galleryImagesList = this.imagesArray;
+        }
+      })
+    } 
+    if(this.currentURL === 'video'){
+      this.showVideo = true;
+      this._viewService.viewClientsData(ScreenName.galleryVideos).subscribe({
+        next:(res)=>{
+            if(res.code === 'SUC-200'){
+              this.galleryVideosList = res.data;
+            }
+        }, error:(err)=>{
+          this.galleryVideosList = this.imagesArray;
+        }
+      })
+    } 
+    if(this.currentURL === 'certificates') {
+      this.showCertificates = true;
+
+      this._viewService.getCertificatesData().subscribe({
+        next:(res)=>{
+          if(res.code === 'SUC-200'){
+            this.certificatesList = res.data;
+          }
+        }, error:(err)=>{
+          this.certificatesList = this.certificatesArray;
+        }
+      })
+    }
   }
 
 }

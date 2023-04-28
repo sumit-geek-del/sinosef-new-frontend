@@ -6,11 +6,11 @@
             <div class="row">
                 
                 <ng-container *ngIf="isOnGoing">
-                    <app-projects-card [projectDetails]="onGoingProjectsList"></app-projects-card>
+                    <app-projects-card [projectDetails]="ongoingProjectsArray"></app-projects-card>
                 </ng-container>
 
                 <ng-container *ngIf="isCompleted">
-                    <app-projects-card [projectDetails]="completedProjectsList"></app-projects-card>
+                    <app-projects-card [projectDetails]="completedProjectsArray"></app-projects-card>
                 </ng-container>
             
             </div>

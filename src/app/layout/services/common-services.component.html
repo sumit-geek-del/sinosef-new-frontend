@@ -3,10 +3,10 @@
     <div class="row">
         <div class="col-md-8 col-lg-8 col-sm-12 content_div">
             <h1>Services</h1>
-            <ng-container>
-                <div class="row r_p_ab" *ngFor="let item of aboutUsDataArray">
-                    <h3>{{item.subheading}}</h3>
-                    <p>{{item.content}}</p>
+            <ng-container *ngIf="isExternalDev">
+                <div class="row r_p_ab" *ngFor="let item of externalDevData">
+                    <h3>{{item.heading}}</h3>
+                    <p>{{item.subHeading}}</p>
                     <hr>
                 </div>
             </ng-container>

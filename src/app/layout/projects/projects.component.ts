@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ViewService } from 'src/Services/view-services/view.service';
+enum ProjectType {
+  ongoing = 'OnGoing',
+  completed = 'Completed'
 
+}
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
@@ -95,12 +100,42 @@ export class ProjectsComponent implements OnInit {
       address:'Sector 12 Gurgaon'
     },
   ]
-  constructor(private _router:Router) { }
+
+  ongoingProjectsArray:Array<any> = [];
+  completedProjectsArray:Array<any> = [];
+  constructor(private _router:Router, private _viewService:ViewService) { }
 
   ngOnInit(): void {
     const currentURL:string = this._router.url.split('/')[1];
-    if(currentURL==='ongoing') this.isOnGoing = true;
-    if(currentURL==='completed') this.isCompleted = true;
+    if(currentURL==='ongoing') {
+      this.isOnGoing = true;
+      this._viewService.viewProjectsData(ProjectType.ongoing).subscribe({
+        next:(res)=>{
+          if(res.code === 'SUC-200'){
+            this.ongoingProjectsArray = res.data;
+          }
+        }, error:(err)=>{
+          this.ongoingProjectsArray = this.onGoingProjectsList;
+          throw new Error(err);
+
+        }
+      })
+
+     }
+    if(currentURL==='completed'){
+      this.isCompleted = true;
+      this._viewService.viewProjectsData(ProjectType.completed).subscribe({
+        next:(res)=>{
+          if(res.code === 'SUC-200'){
+            this.completedProjectsArray = res.data;
+          }
+        }, error:(err)=>{
+          this.completedProjectsArray = this.completedProjectsList;
+          throw new Error(err);
+
+        }
+      })
+    } 
   }
 
 }
