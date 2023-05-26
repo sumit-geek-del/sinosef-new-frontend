@@ -98,4 +98,16 @@
         width: 0%;
     }
 
+ 
+
 }
+
+@media screen and (min-width:1024px) {
+    .nav-item > a{
+        font-size: 17px;
+    }
+    .navbar-brand {
+        margin-left: 0;
+    }
+}
+

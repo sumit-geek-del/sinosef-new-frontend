@@ -58,13 +58,13 @@
 
 @media (max-width:768px){
     .carousel-caption{
-        right: 35px;
-        top: 142px;
+        right: 10%;
+        top: 41%;
     }
     .carousel-caption > h5{
         letter-spacing: 3px;
         word-spacing: 0;
-        font-size: 18px;
+        font-size: 20px;
         margin-bottom: 20px;
         text-align: center;
     }
@@ -80,9 +80,23 @@
     }
 }
 
-@media screen and (max-width:1024px) and (min-width:768px) {
+@media screen and (min-width:770px) and (max-width:1024px) {
     .carousel-caption{
         right: 180px;
         top: 278px;
+    }
+}
+
+@media screen and (min-width:360px) and (max-width:740px) {
+    .carousel-caption{
+        right: 35px;
+        top:39%;
+    }
+
+    .carousel-caption > h5{
+        font-size: 20px;
+    }
+    .carousel-caption > p{
+        font-size: 15px;
     }
 }
