@@ -4,9 +4,12 @@
             <h1>Career</h1>
             <p>We are continuously on the lookout for talented and assiduous individuals who have a steely determination to excel in their career. When you become part of the Sinosef team, your opportunities are endless. Serving our customers through diverse business units, we offer challenging assignments on some of the world’s largest and most complex projects.</p>
 
-            <p>
-                A career at Sinosef Enterprises pvt ltd is more than just a job. When you join us, you join the Best Team in the industry that works to create a better future for all mankind. You will become part of one of the best construction company, and create a real impact that lasts. If you feel you are the right candidate, please forward your resume to info@sinosef.com or apply online by selecting a post below:
-            </p>
+            <ng-container *ngIf="posts && posts.length!==0">
+                <h3 class="vacancies_head">Vacancies Open For</h3>
+                <span class="vacancies_head_span" *ngFor="let post of posts; let i=index;">
+                   {{i+1}}. {{post["Post Name"]}}
+                </span>
+            </ng-container>
 
          
         </div>
@@ -56,8 +59,8 @@
                       <mat-form-field appearance="outline">
                         <mat-label>Post</mat-label>
                         <mat-select  formControlName="appliedPost">
-                          <mat-option *ngFor="let post of posts" [value]="post.post_name">
-                            {{post.post_name}}
+                          <mat-option *ngFor="let post of posts" [value]="post['Post Name']">
+                            {{post['Post Name']}}
                           </mat-option>
                         </mat-select>
                         <mat-error *ngIf="careerForm.get('appliedPost')?.touched && careerForm.get('appliedPost')?.errors?.['required']">Please Select Post You want to apply *</mat-error>
