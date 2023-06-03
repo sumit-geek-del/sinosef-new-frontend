@@ -29,4 +29,12 @@ export class ViewService {
   getCertificatesData(){
     return this._http.get<any>(`${this.url}/view/certificates`);
   }
+
+  getCompanyProfile(){
+    return this._http.get<any>(`${this.url}/view/company-profile`);
+  }
+
+  downloadCompanyProfile(fileDownloadDTO:any){
+    return this._http.post<any>(`${this.url}/career/file`, fileDownloadDTO);
+  }
 }

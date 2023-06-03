@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { PostsService } from 'src/Services/posts/posts.service';
 import { toastMixin } from '../career/career.component';
 import { Router } from '@angular/router';
+import { FooterComponent } from 'src/shared/footer/footer.component';
+import { ViewService } from 'src/Services/view-services/view.service';
 
 @Component({
   selector: 'app-contact-us',
@@ -12,11 +14,14 @@ import { Router } from '@angular/router';
 export class ContactUsComponent implements OnInit {
 
   contactUsForm!:FormGroup;
+  companyProfileKey:string = '';
+  bucketName:string = ''
 
-  constructor(private _fb:FormBuilder, private _postService:PostsService, private _router:Router) { }
+  constructor(private _fb:FormBuilder, private _postService:PostsService, private _router:Router, private _viewService:ViewService) { }
 
   ngOnInit(): void {
     this.createForm();
+    this.getCompanyProfileKey();
   }
 
   createForm(){
@@ -25,6 +30,41 @@ export class ContactUsComponent implements OnInit {
       email:['', Validators.required],
       phoneNo:['', Validators.required],
       message:['', Validators.required]
+    })
+  }
+
+  getCompanyProfileKey(){
+    this._viewService.getCompanyProfile().subscribe({
+      next:(res)=>{
+        if(res.code === 'SUC-200'){
+          this.companyProfileKey = res.data.Key;
+          this.bucketName = res.data.bucket_name;
+        }
+      }, error:(err)=>{
+        console.log(err);
+      }
+    })
+  }
+
+  downloadCompanyProfile(){
+    const downloadFileDTO = {
+      Key:this.companyProfileKey, 
+      bucketName:this.bucketName
+    }
+
+    this._viewService.downloadCompanyProfile(downloadFileDTO).subscribe({
+      next:(res)=>{
+        let a = document.createElement('a');
+        a.href=res.fileUrl;
+        a.click();
+        toastMixin.fire({
+          title: 'Company Profile Downloaded !!'
+        })
+      }, error:(err)=>{
+        toastMixin.fire({
+          title: 'Something went wrong !!'
+        })
+      }
     })
   }
 

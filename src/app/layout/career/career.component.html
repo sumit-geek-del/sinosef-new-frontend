@@ -7,7 +7,13 @@
             <ng-container *ngIf="posts && posts.length!==0">
                 <h3 class="vacancies_head">Vacancies Open For</h3>
                 <span class="vacancies_head_span" *ngFor="let post of posts; let i=index;">
-                   {{i+1}}. {{post["Post Name"]}}
+                   {{i+1}}. {{post["Post Name"]}} 
+                   <ng-container *ngIf="post['jobDescription']!== ''">
+                   - 
+
+                   </ng-container>
+
+                   {{post['jobDescription']|| ''}}
                 </span>
             </ng-container>
 
