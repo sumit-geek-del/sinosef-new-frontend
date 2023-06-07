@@ -26,7 +26,6 @@ export class FooterComponent implements OnInit {
           this.bucketName = res.data.bucket_name;
         }
       }, error:(err)=>{
-        console.log(err);
       }
     })
   }

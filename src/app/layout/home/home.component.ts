@@ -18,7 +18,6 @@ export class HomeComponent implements OnInit {
       next:(res)=>{
         if(res.code === 'SUC-200'){
           this.homeData = res.data;
-          console.log(this.homeData);
         }
       },
       error:(err)=>{

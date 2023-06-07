@@ -15,7 +15,6 @@ export class SharedCardComponent implements OnInit {
   }
 
   ngOnChanges():void{
-    console.log(this.imagesArray)
   }
 
 }
