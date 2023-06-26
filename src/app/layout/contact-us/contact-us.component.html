@@ -59,7 +59,9 @@
     </div>
 
     <div class="col-md-4 col-lg-4 col-sm-12 r_i_d">
-      <img src="assets/images/michal-biernat-h0xEUQXzU38-unsplash.jpg" alt="" />
+      <ng-lottie [options]="options" (animationCreated)="onAnimate($event)">
+        
+      </ng-lottie>
     </div>
   </div>
 </div>
@@ -67,12 +69,12 @@
 <div class="container a_c">
   <div class="row">
     <h1>Reach Us</h1>
-    <div class="col reg_off_d">
+    <!-- <div class="col reg_off_d">
       <h1>Registered Office</h1>
       <p><i class="fa fa-map-marker" aria-hidden="true"></i>Plot No. C-270, Shushant Lok Phase-I, Gurgaon, Haryana(122001)</p>
       <p><i class="fa fa-phone" aria-hidden="true"></i>0124 - 4272253</p>
       <p><i class="fa fa-envelope-o" aria-hidden="true"></i>info@sinosef.com,Seplag73@gmail.com</p>
-    </div>
+    </div> -->
     <hr class="hr" style="display:none">
     <div class="col reg_off_d">
         <h1>Head Office</h1>
@@ -91,3 +93,8 @@
 </div>
 
 <hr>
+
+
+<ng-container>
+    <app-footer></app-footer>
+</ng-container>

@@ -6,7 +6,15 @@ import { ContactUsComponent } from './contact-us.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from 'src/shared/shared.module';
+import { LottieModule } from 'ngx-lottie';
+import player from "lottie-web";
 
+// Export this function
+
+export function playerFactory() {
+  return player;;
+}
 @NgModule({
   declarations: [
     ContactUsComponent
@@ -16,7 +24,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ContactUsRoutingModule,
     MatFormFieldModule,
     MatInputModule, ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    SharedModule,
+    LottieModule.forRoot({ player: playerFactory })
   ]
 })
 export class ContactUsModule { }

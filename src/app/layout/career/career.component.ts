@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AnimationItem } from 'lottie-web';
+import { AnimationOptions } from 'ngx-lottie';
 import { PostsService } from 'src/Services/posts/posts.service';
 import Swal from 'sweetalert2';
 
@@ -17,6 +19,8 @@ export const toastMixin = Swal.mixin({
     toast.addEventListener('mouseleave', Swal.resumeTimer)
   }
 })
+
+ 
 @Component({
   selector: 'app-career',
   templateUrl: './career.component.html',
@@ -29,6 +33,9 @@ export class CareerComponent implements OnInit {
   posts:Array<any> = [];
   fileSelect!:File;
   isFileSelected:boolean = false;
+  options: AnimationOptions = {    
+    path: 'assets/51108-career-coaching.json'  
+  }; 
   constructor(private _fb:FormBuilder, private _postService:PostsService, private _router:Router) { }
 
   ngOnInit(): void {
@@ -42,6 +49,9 @@ export class CareerComponent implements OnInit {
     })
 
    
+  }
+  onAnimate(animationItem: AnimationItem): void {    
+    // console.log(animationItem);  
   }
 
   createForm(){

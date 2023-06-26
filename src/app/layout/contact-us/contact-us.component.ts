@@ -5,6 +5,8 @@ import { toastMixin } from '../career/career.component';
 import { Router } from '@angular/router';
 import { FooterComponent } from 'src/shared/footer/footer.component';
 import { ViewService } from 'src/Services/view-services/view.service';
+import { AnimationOptions } from 'ngx-lottie';
+import { AnimationItem } from 'lottie-web';
 
 @Component({
   selector: 'app-contact-us',
@@ -17,11 +19,22 @@ export class ContactUsComponent implements OnInit {
   companyProfileKey:string = '';
   bucketName:string = ''
 
+  options: AnimationOptions = {    
+    path: 'assets/51892-career-guidance.json'  
+  };  
+
   constructor(private _fb:FormBuilder, private _postService:PostsService, private _router:Router, private _viewService:ViewService) { }
 
   ngOnInit(): void {
     this.createForm();
     this.getCompanyProfileKey();
+
+ 
+
+  }
+
+  onAnimate(animationItem: AnimationItem): void {    
+    console.log(animationItem);  
   }
 
   createForm(){

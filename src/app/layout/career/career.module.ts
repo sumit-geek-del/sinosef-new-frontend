@@ -7,7 +7,13 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatSelectModule} from '@angular/material/select'
+import { LottieModule } from 'ngx-lottie';
+import player from "lottie-web";
 
+
+export function playerFactory() {
+  return player;
+}
 
 @NgModule({
   declarations: [
@@ -19,7 +25,8 @@ import {MatSelectModule} from '@angular/material/select'
     MatFormFieldModule,
     MatInputModule, ReactiveFormsModule,
     FormsModule,
-    MatSelectModule
+    MatSelectModule,
+    LottieModule.forRoot({player:playerFactory})
   ]
 })
 export class CareerModule { }

@@ -8,6 +8,9 @@ import { Component, OnInit, Input } from '@angular/core';
 export class SharedCardComponent implements OnInit {
   @Input() imagesArray!:Array<any>
   @Input() from!:string;
+
+  src:string = '';
+  IsshowEnlargeImage:boolean = false;
   constructor() { }
 
   ngOnInit(): void {
@@ -15,6 +18,16 @@ export class SharedCardComponent implements OnInit {
   }
 
   ngOnChanges():void{
+  }
+
+  showEnlargeImage(imageSrc:string){
+    this.src = imageSrc;
+    this.IsshowEnlargeImage = true;
+
+  }
+
+  hide(value:boolean){
+    if(value) this.IsshowEnlargeImage = false
   }
 
 }

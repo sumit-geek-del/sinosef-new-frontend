@@ -1,8 +1,8 @@
 
-    <div class="row">
+<div class="row">
         <ng-container>
             <div class="col-md-4 col-sm-6 images_div" *ngFor="let galleryImage of imagesArray">
-                <img [src]='galleryImage.src' alt="">
+                <img [src]='galleryImage.src' alt="" (click)="showEnlargeImage(galleryImage.src)">
                 <h6 *ngIf="from=='certificate' || 'ourClients'">{{galleryImage.name}}</h6>
                 <p *ngIf="from !== 'certificate'">{{galleryImage.subHeading}}</p>
 
@@ -13,4 +13,9 @@
             </div>
         </ng-container>
   
-    </div>
+</div>
+
+
+<ng-container *ngIf="IsshowEnlargeImage">
+    <app-image-viewer [imageSrc]="src" (close)="hide($event)"></app-image-viewer>
+</ng-container>
