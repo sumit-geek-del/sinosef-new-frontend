@@ -1,19 +1,36 @@
 
-<div class="row">
+<ng-container *ngIf="from !== 'videos'">
+    <div class="row">
         <ng-container>
             <div class="col-md-4 col-sm-6 images_div" *ngFor="let galleryImage of imagesArray">
                 <img [src]='galleryImage.src' alt="" (click)="showEnlargeImage(galleryImage.src)">
-                <h6 *ngIf="from=='certificate' || 'ourClients'">{{galleryImage.name}}</h6>
-                <p *ngIf="from !== 'certificate'">{{galleryImage.subHeading}}</p>
-
-
-                <h6 *ngIf="from=='certificate'">{{galleryImage.heading}}</h6>
-                <p *ngIf="from=='certificate'">{{galleryImage.subHeading}}</p>
-                <p *ngIf="from=='certificate'">{{galleryImage.type}}</p>
+                <h6 class="img_h" *ngIf="from=='certificate' || 'ourClients'">{{galleryImage.name}}</h6>
+                <p class="img_p" *ngIf="from !== 'certificate'">{{galleryImage.subHeading}}</p>
+                <h6 class="img_h" *ngIf="from=='certificate'">{{galleryImage.heading}}</h6>
+                <p class="img_p" *ngIf="from=='certificate'">{{galleryImage.subHeading}}</p>
+                <p class="img_p" *ngIf="from=='certificate'">{{galleryImage.type}}</p>
             </div>
         </ng-container>
   
 </div>
+</ng-container>
+
+<ng-container *ngIf="from === 'videos'" >
+
+    <ng-container *ngFor="let galleryImage of imagesArray">
+        <div class="video-div">
+            <video controls muted>
+                <source [src]="galleryImage.src">
+            </video>
+
+            <h6 class="img_h">{{galleryImage.name}}</h6>
+            <p  class="img_p">{{galleryImage.subHeading}}</p>
+        </div>
+
+    </ng-container>
+</ng-container>
+
+
 
 
 <ng-container *ngIf="IsshowEnlargeImage">

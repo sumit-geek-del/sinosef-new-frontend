@@ -6,7 +6,12 @@
             <ng-container *ngIf="isExternalDev">
                 <div class="row r_p_ab" *ngFor="let item of externalDevData">
                     <h3>{{item.heading}}</h3>
-                    <p>{{item.subHeading}}</p>
+                    <ul>
+                        <li *ngFor="let items of item.subHeading">
+                           <p> {{items}}</p>
+                        </li>
+                    </ul>
+
                     <hr>
                 </div>
             </ng-container>

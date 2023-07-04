@@ -34,7 +34,14 @@ export class CommonServicesComponent implements OnInit {
       this._viewService.viewCompanyData(ScreenName.externalDev).subscribe({
         next:(res)=>{
           if(res.code === 'SUC-200'){
+
             this.externalDevData = res.data;
+            this.externalDevData  =this.externalDevData.map((item)=>{
+              return {
+                ...item, subHeading:item.subHeading.split('\n')
+              }
+            })
+
           }
         }, error:(err)=>{
           this.externalDevData= StaticData.servicesData;

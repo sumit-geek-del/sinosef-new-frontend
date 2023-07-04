@@ -13,6 +13,7 @@ export class SharedCardComponent implements OnInit {
   IsshowEnlargeImage:boolean = false;
   constructor() { }
 
+
   ngOnInit(): void {
     
   }
@@ -21,6 +22,7 @@ export class SharedCardComponent implements OnInit {
   }
 
   showEnlargeImage(imageSrc:string){
+    console.log(this.from)
     this.src = imageSrc;
     this.IsshowEnlargeImage = true;
 

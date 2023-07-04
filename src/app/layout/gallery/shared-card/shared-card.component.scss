@@ -25,20 +25,29 @@
     padding: 40px;
 }
 
-.images_div > h6{
+.img_h{
     margin-top: 15px;
     font-weight: 600;
     font-family: 'Roboto Slab', serif;
     font-size: 20px;
 }
 
-.images_div > p{
+.img_p{
     color: #444;
     font-family: 'Merriweather', serif;
     font-size: 16px;
     font-weight: 500;
 }
 
+.video-div{
+    display: inline-block;
+}
+
+.video-div video{
+    max-width: 250px;
+    max-height: 200px;
+    margin: 10px;
+}
 @media (max-width:768px){
     .row{
         padding: 0;

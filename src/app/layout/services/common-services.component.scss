@@ -36,13 +36,17 @@
     font-size: 30px;
 }
 
-.r_p_ab > p{
+.r_p_ab > ul > li > p{
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     word-spacing: 2px;
     letter-spacing: 0.6px;
-    margin: 50px 0;
+    margin: 20px 0;
     color: #7a7a7a;;
+}
+
+ul {
+    list-style-type: none;
 }
 
 .i_di > img{
